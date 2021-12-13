@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+ }
+
+ .opensans {
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .dmdisplay {
+    font-family: 'DM Serif Display', serif;
+ }
+
+ .wizzycolor {
+    background-color: indigo;
+ }
+
+ .backgroundimg {
+    background-image: url(https://res.cloudinary.com/packs4jobs/image/upload/v1638221950/ft_zbgddt.png);
+ }

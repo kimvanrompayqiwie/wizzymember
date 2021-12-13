@@ -1,0 +1,532 @@
+<% if !current_page?('/members/sign_in') && !current_page?('/members/sign_up')%>
+  <%= render 'partials/navbar' %>
+<% end %>
+
+
+
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="dmdisplay text-4xl pt-10 pb-10">Bonjour <%= current_member.name %></h2>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+          <section aria-labelledby="section-1-title">
+            <h2 class="sr-only" id="section-1-title">Section title</h2>
+            <div class="rounded-lg bg-white overflow-hidden shadow">
+              <div class="p-6">
+                <!-- Your content -->
+                <div class="bg-cover h-96 rounded" style="background-image: url(https://res.cloudinary.com/packs4jobs/image/upload/v1639179489/ft_fqger7.png)"></div>
+                      <p class="text-3xl dmdisplay text-gray-900 py-6 sm:py-6">
+                        Rencontrez l'équipe
+                      </p>
+                <p class="opensans">Nous nous engageons à donner à nos membres tous les moyens possibles d'atteindre leurs objectifs. Vous rencontrerez les personnes ci-dessous dans ce bâtiment, et elles pourront répondre à toutes vos questions.</p>
+                <!-- This example requires Tailwind CSS v2.0+ -->
+
+                    <a href="#" class="flex-shrink-0 group block pt-3 pb-5">
+                        <div class="flex items-center">
+                        <div>
+                            <img class="inline-block h-9 w-9 rounded-full" src="https://res.cloudinary.com/packs4jobs/image/upload/v1638870060/Samuel_Kagan_khdllq.png" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm dmdisplay text-gray-700 group-hover:text-gray-900">
+                            Samuel Kagan
+                            </p>
+                            <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                            Consultant
+                            </p>
+                        </div>
+                        </div>
+                    </a>
+
+
+  
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+
+                <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+                                        <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                                        <p class="dmdisplay text-gray-900 text-2xl">
+                                            Services Inclus
+                                        </p>
+                                        <dl class="mt-6 space-y-3 divide-y ">
+                                            <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                                            <dt class="">
+                                                <!-- Expand/collapse question button -->
+                                                <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                                <span class="text-gray-900 dmdisplay">
+                                                    Définition du profil de votre candidat idéal (ICP)
+                                                </span>
+                                                <span class="ml-6 h-7 flex items-center">
+                                                    <!--
+                                                    Expand/collapse icon, toggle classes based on question open state.
+
+                                                    Heroicon name: outline/chevron-down
+
+                                                    Open: "-rotate-180", Closed: "rotate-0"
+                                                    -->
+                                                    <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                                </button>
+                                            </dt>
+                                            <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                                <p class="text-base text-gray-500">
+                                                    Création des visuels
+                                                </p>
+                                            </dd>
+                                            </div>
+
+                                            <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                                            <dt class="">
+                                                <!-- Expand/collapse question button -->
+                                                <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                                <span class="text-gray-900 dmdisplay">
+                                                    Création des visuels
+                                                </span>
+                                                <span class="ml-6 h-7 flex items-center">
+                                                    <!--
+                                                    Expand/collapse icon, toggle classes based on question open state.
+
+                                                    Heroicon name: outline/chevron-down
+
+                                                    Open: "-rotate-180", Closed: "rotate-0"
+                                                    -->
+                                                    <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                                </button>
+                                            </dt>
+                                            <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                                <p class="text-base text-gray-500">
+                                                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                                </p>
+                                            </dd>
+                                            </div>
+
+                                            <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                                                <dt class="">
+                                                    <!-- Expand/collapse question button -->
+                                                    <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                                    <span class="text-gray-900 dmdisplay">
+                                                        Publication sur le reseau Wizzy
+                                                    </span>
+                                                    <span class="ml-6 h-7 flex items-center">
+                                                        <!--
+                                                        Expand/collapse icon, toggle classes based on question open state.
+    
+                                                        Heroicon name: outline/chevron-down
+    
+                                                        Open: "-rotate-180", Closed: "rotate-0"
+                                                        -->
+                                                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                        </svg>
+                                                    </span>
+                                                    </button>
+                                                </dt>
+                                                <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                                    <p class="text-base text-gray-500">
+                                                    I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                                    </p>
+                                                </dd>
+                                                </div>
+                                        </dl>
+                                        </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                    <p class="dmdisplay text-gray-900 text-2xl">
+                        Services Standard
+                    </p>
+                    <dl class="mt-6 space-y-3 divide-y ">
+                        <div class="pt-3 " x-data="{ open: false }" @click.away="open = false">
+                            <dt class="">
+                                <!-- Expand/collapse question button -->
+                                <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                <span class="text-gray-900 dmdisplay">
+                                    Suivi et consultance hebdomadaire
+                                </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <!--
+                                    Expand/collapse icon, toggle classes based on question open state.
+
+                                    Heroicon name: outline/chevron-down
+
+                                    Open: "-rotate-180", Closed: "rotate-0"
+                                    -->
+                                    <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                                </button>
+                            </dt>
+                            <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                <p class="text-base text-gray-500">
+                                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                </p>
+                            </dd>
+                            </div>
+
+                            <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                                <dt class="">
+                                    <!-- Expand/collapse question button -->
+                                    <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                    <span class="text-gray-900 dmdisplay">
+                                        Tableau de bord 24/7
+                                    </span>
+                                    <span class="ml-6 h-7 flex items-center">
+                                        <!--
+                                        Expand/collapse icon, toggle classes based on question open state.
+
+                                        Heroicon name: outline/chevron-down
+
+                                        Open: "-rotate-180", Closed: "rotate-0"
+                                        -->
+                                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </span>
+                                    </button>
+                                </dt>
+                                <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                    <p class="text-base text-gray-500">
+                                    I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                    </p>
+                                </dd>
+                                </div>
+
+                                <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                                    <dt class="">
+                                        <!-- Expand/collapse question button -->
+                                        <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                                        <span class="text-gray-900 dmdisplay">
+                                           Adaptation et correction de campagne
+                                        </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                                            <!--
+                                            Expand/collapse icon, toggle classes based on question open state.
+
+                                            Heroicon name: outline/chevron-down
+
+                                            Open: "-rotate-180", Closed: "rotate-0"
+                                            -->
+                                            <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </span>
+                                        </button>
+                                    </dt>
+                                    <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                                        <p class="text-base text-gray-500">
+                                        I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                        </p>
+                                    </dd>
+                                    </div>
+                    </dl>
+                    </div>
+</div>
+
+<div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+    <p class="dmdisplay text-gray-900 text-2xl">
+        Services Inclus
+    </p>
+    <dl class="mt-6 space-y-3 divide-y ">
+        <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+            <dt class="">
+                <!-- Expand/collapse question button -->
+                <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                <span class="text-gray-900 dmdisplay">
+                    What&#039;s the best thing about Switzerland?
+                </span>
+                <span class="ml-6 h-7 flex items-center">
+                    <!--
+                    Expand/collapse icon, toggle classes based on question open state.
+
+                    Heroicon name: outline/chevron-down
+
+                    Open: "-rotate-180", Closed: "rotate-0"
+                    -->
+                    <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+                </button>
+            </dt>
+            <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                <p class="text-base text-gray-500">
+                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                </p>
+            </dd>
+            </div>
+
+            <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                <dt class="">
+                    <!-- Expand/collapse question button -->
+                    <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                    <span class="text-gray-900 dmdisplay">
+                        What&#039;s the best thing about Switzerland?
+                    </span>
+                    <span class="ml-6 h-7 flex items-center">
+                        <!--
+                        Expand/collapse icon, toggle classes based on question open state.
+
+                        Heroicon name: outline/chevron-down
+
+                        Open: "-rotate-180", Closed: "rotate-0"
+                        -->
+                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    </button>
+                </dt>
+                <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                    <p class="text-base text-gray-500">
+                    I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    </p>
+                </dd>
+                </div>
+
+                <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                    <dt class="">
+                        <!-- Expand/collapse question button -->
+                        <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                        <span class="text-gray-900 dmdisplay">
+                            What&#039;s the best thing about Switzerland?
+                        </span>
+                        <span class="ml-6 h-7 flex items-center">
+                            <!--
+                            Expand/collapse icon, toggle classes based on question open state.
+
+                            Heroicon name: outline/chevron-down
+
+                            Open: "-rotate-180", Closed: "rotate-0"
+                            -->
+                            <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                        </button>
+                    </dt>
+                    <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                        <p class="text-gray-900 dmdisplay">
+                        I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                        </p>
+                    </dd>
+                    </div>
+    </dl>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+    <p class="dmdisplay text-gray-900 ">
+        Services Inclus
+    </p>
+    <dl class="mt-6 space-y-3 divide-y ">
+        <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+            <dt class="">
+                <!-- Expand/collapse question button -->
+                <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                <span class="text-gray-900 dmdisplay">
+                    What&#039;s the best thing about Switzerland?
+                </span>
+                <span class="ml-6 h-7 flex items-center">
+                    <!--
+                    Expand/collapse icon, toggle classes based on question open state.
+
+                    Heroicon name: outline/chevron-down
+
+                    Open: "-rotate-180", Closed: "rotate-0"
+                    -->
+                    <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+                </button>
+            </dt>
+            <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                <p class="text-base text-gray-500">
+                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                </p>
+            </dd>
+            </div>
+
+            <div class="pt-3 class="pt-6" x-data="{ open: false }" @click.away="open = false">
+                <dt class="">
+                    <!-- Expand/collapse question button -->
+                    <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                    <span class="text-gray-900 dmdisplay">
+                        What&#039;s the best thing about Switzerland?
+                    </span>
+                    <span class="ml-6 h-7 flex items-center">
+                        <!--
+                        Expand/collapse icon, toggle classes based on question open state.
+
+                        Heroicon name: outline/chevron-down
+
+                        Open: "-rotate-180", Closed: "rotate-0"
+                        -->
+                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    </button>
+                </dt>
+                <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                    <p class="text-base text-gray-500">
+                    I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    </p>
+                </dd>
+                </div>
+
+                <div class="pt-3" x-data="{ open: false }" @click.away="open = false">
+                    <dt class="">
+                        <!-- Expand/collapse question button -->
+                        <button @click="open = ! open" type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                        <span class="text-gray-900 dmdisplay">
+                            What&#039;s the best thing about Switzerland?
+                        </span>
+                        <span class="ml-6 h-7 flex items-center">
+                            <!--
+                            Expand/collapse icon, toggle classes based on question open state.
+
+                            Heroicon name: outline/chevron-down
+
+                            Open: "-rotate-180", Closed: "rotate-0"
+                            -->
+                            <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                        </button>
+                    </dt>
+                    <dd x-show="open" class="mt-2 pr-12" id="faq-0">
+                        <p class="text-base text-gray-500">
+                        I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                        </p>
+                    </dd>
+                    </div>
+    </dl>
+    </div>
+</div>
+
+
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right column -->
+        <div class="grid grid-cols-1 gap-4">
+          <section aria-labelledby="section-2-title">
+            <div class="rounded-lg bg-white overflow-hidden shadow">
+              <div class="p-6">
+                <!-- Your content -->
+                <div class="max-w-lg mx-auto">
+          <p class="text-2xl dmdisplay tracking-tight text-indigo-900">
+            Informations générales
+          </p>
+          <dl class="mt-8 ">
+            <div class="">
+              <dt class="text-base dmdisplay text-gray-400">Nos bureaus</dt>
+              <dd class="flex">
+                <span class="ml-3">                
+                
+                <p class="text-blue-500">Rue de Congres 35</p>
+                <p class="text-blue-500">1000 Bruxelles</p>
+                <p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.6821100994853!2d4.36061341574613!3d50.855570679533365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3785445d7a5%3A0xa8b305b5609d1a9!2sSint-Lazaruslaan%2C%20Sint-Joost-ten-Node!5e0!3m2!1snl!2sbe!4v1638830429048!5m2!1snl!2sbe" class="pr-1" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </p>
+            </span>
+
+              </dd>
+            </div>
+            <div class="mt-6">
+            <dt class="text-base dmdisplay text-gray-400">Assistance</dt>
+            <dd class="flex">
+
+                <span class="ml-3">
+                  <p>Français: <a href="tel:+32 2 486 11 40" class=" text-blue-500">+32 2 486 11 40</a></p>
+                  <p>Néerlandais: <a href="tel:+32 3 613 09 44 "class=" text-blue-500">+32 3 613 09 44</a></p>
+                </span>
+              </dd>
+            </div>
+            <div class="mt-3">
+              <dt class="text-base dmdisplay text-gray-400">Email</dt>
+              <dd class="flex">
+                <span class="ml-3">
+                    <A HREF="mailto:support@wizzy.hr" class=" text-blue-500">support@wizzy.hr</A>
+                </span>
+              </dd>
+            </div>
+                        <div class="mt-3">
+              <dt class="text-base dmdisplay text-gray-400">Heures d'ouverture</dt>
+              <dd class="flex">
+
+                <span class="ml-3">
+                  Du lundi au vendredi de 08:00h à 18:00h
+                </span>
+              </dd>
+            </div>
+          </dl>
+
+
+          <!-- This example requires Tailwind CSS v2.0+ -->
+                    <div class="relative py-2">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center">
+                        <span class="px-2 bg-white text-sm text-gray-500">
+                        
+                        </span>
+                        </div>
+                    </div>
+  
+
+          <h2 class="pt-5 text-2xl  dmdisplay tracking-tight text-indigo-900">
+            Informations pratiques
+          </h2>
+          <dl class="mt-8 text-sm text-black">
+            <div>
+              <dt class="dmdisplay text-red-700 text-base">Vos identifiants</dt>
+              <dd class="flex">
+                <span class="ml-3 opensans">
+                <p>Nom d'utilisateur : <%= current_member.name %></p>
+                <p>Mot de passe : <%= current_member.encrypted_password %></p>
+                </span>
+              </dd>
+            </div>
+            <div class="mt-6">
+            <dt class=" dmdisplay text-yellow-500 text-base">Votre consultant</dt>
+            <dd class="flex">
+
+                <span class="ml-3 opensans">
+                  <p>Samuel Kagan</p>
+                  <p><a href="tel:+32 2 486 11 44" class=" text-blue-500">T: +32 3 613 09 44</a></p>
+                  <p><a href="tel:+32 476 84 39 48" class=" text-blue-500">M: +32 476 84 39 48</a></p>
+                  <A HREF="mailto:s.kagan@wizzy.hr" class=" text-blue-500">s.kagan@wizzy.hr</A>
+                </span>
+              </dd>
+            </div>
+          </dl>
+
+
+        </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,125 @@
+<!--
+<div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">
+    <h2>Se connecter</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+
+    <%= render "members/shared/links" %>
+</div>
+
+
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-white">
+  <body class="h-full">
+  ```
+-->
+<div class="p-20 max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">
+<div class=" flex">
+  <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div>
+        <p class="dmdisplay text-6xl text-indigo-900">W</p>
+        <h2 class="mt-6 text-4xl font-extrabold text-gray-900 dmdisplay">
+          Se connecter
+        </h2>
+      </div>
+
+      <div class="mt-8">
+        <div>
+          <div>
+
+          </div>
+
+        </div>
+
+        <div class="mt-6">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="py-3">
+                <div class="field dmdisplay">
+                  <%= f.label :email, class:'text-lg text-indigo-700' %><br />
+                  <%= f.email_field :email, placeholder:"___@example.com", autofocus: true, autocomplete: "email", class:'appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
+                </div>
+            </div>
+
+            <div class="py-3">
+                <div class="field dmdisplay">
+                  <%= f.label :password, class:'text-lg text-indigo-700' %><br />
+                  <%= f.password_field :password, placeholder:"garder les choses simple", autocomplete: "current-password", class:'appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between py-3">
+                  <% if devise_mapping.rememberable? %>
+                    <div class="field">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me, class:'text-sm text-gray-600' %>
+                    </div>
+                  <% end %>
+
+              <div class="text-sm">
+                <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">
+                  Forgot your password?
+                </a>
+              </div>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Connecter", class:"w-full dmdisplay flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+            </div>
+
+            <p class='pt-3 text-base dmdisplay'>
+            Vous avez pas encore de compte? <a href="/members/sign_up" class=' text-indigo-800'>S'inscrire</a>
+            </p>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden lg:block relative w-0 flex-1 text-center pt-10">
+    <img class="object-cover" src="https://res.cloudinary.com/packs4jobs/image/upload/v1639061744/login_tx2qfy.png" alt="">
+    <p class='dmdisplay text-lg pt-4'>
+    La periode d'essaie est 100% gratuit.
+    </p>
+  </div>
+</div>
+</div>

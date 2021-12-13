@@ -1,0 +1,42 @@
+<div class="p-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+<div class="text-center">
+<h1 class="dmdisplay text-6xl mb-10 text-indigo-900">W</h1>
+</div>
+<h2 class="dmdisplay text-4xl mb-3">Vous enregistrez.</h2>
+
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "members/shared/error_messages", resource: resource %>
+
+    <div class="field p-3 dmdisplay text-lg">
+      <%= f.label :name, "Nom", class:"text-indigo-700" %>
+      <%= f.text_field :name, class:"border-b-4 ml-3", autofocus: true, autocomplete: "name" %>
+    </div>
+
+
+    <div class="field p-3 dmdisplay text-lg">
+      <%= f.label :email, "Email", class:"text-indigo-700" %>
+      <%= f.email_field :email, class:"border-b-4 ml-3", autofocus: true, autocomplete: "email" %>
+
+    </div>
+    <div class="field p-3 dmdisplay text-lg">
+      <%= f.label :password, "Mot de passe", class:"text-indigo-700" %>   
+      <%= f.password_field :password, autocomplete: "new-password", class:"border-b-4 ml-3" %>    <% if @minimum_password_length %>
+      <em class="dmdisplay text-sm">(<%= @minimum_password_length %> charactères minimum)</em>
+      <% end %><br />
+    </div>
+
+    <div class="field p-3 dmdisplay text-lg">
+      <%= f.label :password_confirmation, "Confirmation de votre mot de passe", class:"text-indigo-700" %>
+      <%= f.password_field :password_confirmation, class:"border-b-4 ml-3", autocomplete: "new-password" %>
+    </div>
+
+    <div class="dmdisplay text-lg p-3">
+      <%= f.submit "Enregistrer", class:"bg-indigo-500 hover:bg-blue-700 text-white py-2 px-4 rounded" %>
+    </div>
+
+<% end %>
+
+  <%= render "members/shared/links" %>
+
+</div>
