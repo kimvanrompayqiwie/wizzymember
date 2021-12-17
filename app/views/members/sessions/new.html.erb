@@ -3,7 +3,7 @@
     <h2>Se connecter</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
+      <div class="field opensans">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
@@ -106,7 +106,7 @@
               <%= f.submit "Connecter", class:"w-full dmdisplay flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
             </div>
 
-            <p class='pt-3 text-base dmdisplay'>
+            <p class='pt-3 text-base opensans'>
             Vous avez pas encore de compte? <a href="/members/sign_up" class=' text-indigo-800'>S'inscrire</a>
             </p>
 
@@ -117,7 +117,7 @@
   </div>
   <div class="hidden lg:block relative w-0 flex-1 text-center pt-10">
     <img class="object-cover" src="https://res.cloudinary.com/packs4jobs/image/upload/v1639061744/login_tx2qfy.png" alt="">
-    <p class='dmdisplay text-lg pt-4'>
+    <p class=' text-lg pt-4 opensans'>
     La periode d'essaie est 100% gratuit.
     </p>
   </div>

@@ -9,25 +9,26 @@
     <%= render "members/shared/error_messages", resource: resource %>
 
     <div class="field p-3 dmdisplay text-lg">
-      <%= f.label :name, "Nom", class:"text-indigo-700" %>
-      <%= f.text_field :name, class:"border-b-4 ml-3", autofocus: true, autocomplete: "name" %>
+      <%= f.label :name, "Nom", class:"text-indigo-900 text-3xl opensans" %>
+      <%= f.text_field :name, class:"border-b-4 ml-5 cor text-6xl", autofocus: true, autocomplete: "name" %>
     </div>
 
 
     <div class="field p-3 dmdisplay text-lg">
-      <%= f.label :email, "Email", class:"text-indigo-700" %>
-      <%= f.email_field :email, class:"border-b-4 ml-3", autofocus: true, autocomplete: "email" %>
+      <%= f.label :email, "Email", class:"text-indigo-900 text-3xl opensans" %>
+      <%= f.email_field :email, class:"border-b-4 ml-3 text-6xl", autofocus: true, autocomplete: "email" %>
+
 
     </div>
     <div class="field p-3 dmdisplay text-lg">
-      <%= f.label :password, "Mot de passe", class:"text-indigo-700" %>   
-      <%= f.password_field :password, autocomplete: "new-password", class:"border-b-4 ml-3" %>    <% if @minimum_password_length %>
+      <%= f.label :password, "Mot de passe", class:"text-indigo-900 text-3xl opensans" %>
+      <%= f.password_field :password, autocomplete: "new-password", class:"border-b-4 ml-3 text-6xl" %>    <% if @minimum_password_length %>
       <em class="dmdisplay text-sm">(<%= @minimum_password_length %> charactères minimum)</em>
       <% end %><br />
     </div>
 
     <div class="field p-3 dmdisplay text-lg">
-      <%= f.label :password_confirmation, "Confirmation de votre mot de passe", class:"text-indigo-700" %>
+      <%= f.label :password_confirmation, "Confirmation de votre mot de passe", class:"text-indigo-900 text-3xl opensans" %>
       <%= f.password_field :password_confirmation, class:"border-b-4 ml-3", autocomplete: "new-password" %>
     </div>
 
