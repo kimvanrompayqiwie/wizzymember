@@ -1,0 +1,147 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :generation %>
+    <%= form.text_field :generation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personality %>
+    <%= form.text_field :personality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sectorcat %>
+    <%= form.text_field :sectorcat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :functioncat %>
+    <%= form.text_field :functioncat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :online %>
+    <%= form.date_select :online %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :views %>
+    <%= form.text_field :views %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offline %>
+    <%= form.date_select :offline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :candidates %>
+    <%= form.number_field :candidates %>
+  </div>
+
+  <div class="field">
+    <%= form.label :urljob %>
+    <%= form.text_field :urljob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :media %>
+    <%= form.text_field :media %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ads %>
+    <%= form.text_field :ads %>
+  </div>
+
+  <div class="field">
+    <%= form.label :a %>
+    <%= form.text_field :a %>
+  </div>
+
+  <div class="field">
+    <%= form.label :b %>
+    <%= form.text_field :b %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c %>
+    <%= form.text_field :c %>
+  </div>
+
+  <div class="field">
+    <%= form.label :d %>
+    <%= form.number_field :d %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e %>
+    <%= form.number_field :e %>
+  </div>
+
+  <div class="field">
+    <%= form.label :f %>
+    <%= form.number_field :f %>
+  </div>
+
+  <div class="field">
+    <%= form.label :g %>
+    <%= form.text_field :g %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h %>
+    <%= form.text_area :h %>
+  </div>
+
+  <div class="field">
+    <%= form.label :i %>
+    <%= form.text_area :i %>
+  </div>
+
+  <div class="field">
+    <%= form.label :j %>
+    <%= form.text_area :j %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_153942) do
+ActiveRecord::Schema.define(version: 2021_12_20_143934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,37 @@ ActiveRecord::Schema.define(version: 2021_12_08_153942) do
     t.string "name"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "region"
+    t.string "generation"
+    t.string "personality"
+    t.string "sectorcat"
+    t.string "functioncat"
+    t.string "type"
+    t.integer "duration"
+    t.date "online"
+    t.string "company"
+    t.string "views"
+    t.date "offline"
+    t.integer "candidates"
+    t.string "urljob"
+    t.string "media"
+    t.string "ads"
+    t.string "a"
+    t.string "b"
+    t.string "c"
+    t.integer "d"
+    t.integer "e"
+    t.integer "f"
+    t.date "g"
+    t.text "h"
+    t.text "i"
+    t.text "j"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

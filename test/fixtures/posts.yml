@@ -1,0 +1,57 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  region: MyString
+  generation: MyString
+  personality: MyString
+  sectorcat: MyString
+  functioncat: MyString
+  type: 
+  duration: 1
+  online: 2021-12-20
+  company: MyString
+  views: MyString
+  offline: 2021-12-20
+  candidates: 1
+  urljob: MyString
+  media: MyString
+  ads: MyString
+  a: MyString
+  b: MyString
+  c: MyString
+  d: 1
+  e: 1
+  f: 1
+  g: 
+  h: MyText
+  i: MyText
+  j: MyText
+
+two:
+  title: MyString
+  region: MyString
+  generation: MyString
+  personality: MyString
+  sectorcat: MyString
+  functioncat: MyString
+  type: 
+  duration: 1
+  online: 2021-12-20
+  company: MyString
+  views: MyString
+  offline: 2021-12-20
+  candidates: 1
+  urljob: MyString
+  media: MyString
+  ads: MyString
+  a: MyString
+  b: MyString
+  c: MyString
+  d: 1
+  e: 1
+  f: 1
+  g: 
+  h: MyText
+  i: MyText
+  j: MyText
