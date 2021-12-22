@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<button type="button" class="inline-flex items-center dmdisplay m-5 px-6 py-3 border border-gray-300 shadow-sm text-2xl font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  <%= link_to 'Back', posts_path %>
+</button>
+
+
+<div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl text-4xl">
+
+
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -130,5 +138,14 @@
   <%= @post.j %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
+
+<% if current_member.staff? %>
+<button type="button" class="inline-flex items-center dmdisplay m-5 px-6 py-3 border border-gray-300 shadow-sm text-2xl font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  <%= link_to 'Edit', edit_post_path(@post) %>
+</button>
+  <% end %>
+
+<button type="button" class="inline-flex items-center dmdisplay m-5 px-6 py-3 border border-gray-300 shadow-sm text-2xl font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  <%= link_to 'Back', posts_path %>
+</button>

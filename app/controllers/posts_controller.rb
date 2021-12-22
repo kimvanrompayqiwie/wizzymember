@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :authenticate_member!
 
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+    @online = Post.first.online.strftime('%d-%m-%Y')
+    @offline = Post.first.online + 7.days
   end
 
   # GET /posts/1 or /posts/1.json
@@ -54,6 +57,11 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  # GET /trials or /posts.json
+  def trials
+    @posts = Post.all
   end
 
   private

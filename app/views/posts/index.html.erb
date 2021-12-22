@@ -1,56 +1,43 @@
-<p id="notice"><%= notice %></p>
 <%= render 'partials/navbar' %>
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
   <h1 class="text-4xl pt-10 pb-10 dmdisplay">Vos Campagnes</h1>
   <% @posts.each do |post| %>
     <div class="pb-5">
-      <div class="box-border h-32 w-auto p-4 border-2 grid-cols-3 grid gap-4 hover:border-indigo-300">
+      <div class="box-border h-50 w-auto p-4 border grid-cols-3 grid gap-4 hover:border-indigo-300">
         <div class="">
-          <p class="text-xs opensans text-green-400 font-semibold">online</p>
-          <p class="text-black dmdisplay text-2xl"><%= post.title %></p>
+          <p class="opensans text-green-400 font-semibold">online</p>
+          <p class="text-black dmdisplay text-3xl"><%= post.title %></p>
+          <p class="text-black dmdisplay text-xl"><%= post.company %></p>
           <p class="text-gray-500 opensans">Regio , Sectorcategorie, Functiecategorie</p>
         </div>
-        <div>
-          <p class="text-sm dmdisplay">Durée  <span class="text-sm opensans">12/10/2021 - 15/12/2021</span> <span class="text-sm text-yellow-500 opensans">- 7j. Periode d'essaie</span></p>
-          <p class="text-sm dmdisplay">ICP  <span class="text-sm opensans">Génération X, Protagoniste, Junior Engineer</span></p>
-          <p class="text-sm dmdisplay">Media  <span class="text-sm opensans">Wizzy Network</span><span class="text-gray-400 text-sm opensans"> - Instagram - Google</span></p>
-          <p class="text-sm dmdisplay">Conversion  <span class="text-sm opensans">Views: 600 - Candidatures: 3</span></p>
+        <div class="space-y-2">
+          <p class="text-lg dmdisplay">Durée  <span class="text-base opensans"><%= @online %> - <%= @offline.strftime('%d-%m-%Y') %></span> <span class="text-base animate-pulse text-yellow-600 opensans">- 7j. Periode d'essaie</span></p>
+          <p class="text-lg dmdisplay">ICP  <span class="text-base opensans">Génération X, Protagoniste, Junior Engineer</span></p>
+          <p class="text-lg dmdisplay">Media  <span class="text-base opensans">Wizzy Network</span><span class="text-gray-400 text-base opensans"> - Instagram - Google</span></p>
+          <p class="text-lg dmdisplay"> <span class="text-base opensans border p-1">VIEWS: 600</span>  <span class="text-base opensans border p-1">CANDIDATURES: 3</span></p>
         </div>
-        <div class="sr-only sm:not-sr-only">
-                      <span class="relative p-5 pl-10 z-0 inline-flex rounded-md" x-data="{ open: false }" @click.away="open = false">
-                        <button type="button" class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-indigo-300 bg-white text-sm font-medium text-indigo-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
-                          Lancer en campagne
-                        </button>
-                        <span class="-ml-px relative block">
-                          <button @click="open = ! open" type="button" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-indigo-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" id="option-menu-button" aria-expanded="true" aria-haspopup="true">
-                            <span class="sr-only">Open options</span>
-                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                          </button>
-                          <div class="origin-top-right absolute right-0 mt-2 -mr-1 w-56 rounded-md bg-indigo-50 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="option-menu-button" tabindex="-1">
-                            <div x-show="open" class="py-1" role="none">
-                              <a class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="option-menu-item-0">
-                                Modifier
-                              </a>
+        <div class="space-y-2 sr-only sm:not-sr-only ">
 
-                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="option-menu-item-1">
-                                Save and publish
-                              </a>
+          <button type="button" class="relative flex dmdisplay items-center px-2 py-2 rounded-l-md border border-indigo-300 bg-white font-medium text-indigo-700 hover:bg-yellow-500 hover:text-white hover:border-white focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+            Lancer en campagne
+          </button>
 
-                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="option-menu-item-2">
-                                Export PDF
-                              </a>
-                            </div>
-                          </div>
-                        </span>
-                      </span>
+          <% if current_member.staff? %>
+          <button type="button" class="relative flex items-center opensans px-2 py-2 rounded-l-md bg-white font-medium text-indigo-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+            <%= link_to "Edit", edit_post_path(post) %>
+          </button>
+          <% end %>
+
+          <button type="button" class="relative flex items-center opensans px-2 py-2 rounded-l-md bg-white font-medium text-indigo-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+            <%= link_to "Show", post %>
+          </button>
+
         </div>
       </div>
     </div>
   <% end %>
-
-  <div class="text-center pt-10">
+  <% if current_member.staff? %>
+  <div class="text-center pt-10 animate-bounce">
     <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
       <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
     </svg>
@@ -59,7 +46,7 @@
       Get started by creating a new project.
     </p>
     <div class="mt-6">
-      <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+      <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm dmdisplay font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
         <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
         </svg>
@@ -67,4 +54,5 @@
       </button>
     </div>
   </div>
+  <% end %>
 </div>

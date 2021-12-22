@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_20_143934) do
+ActiveRecord::Schema.define(version: 2021_12_21_232956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "feedback"
+    t.bigint "post_id", null: false
+    t.integer "views"
+    t.integer "candidates"
+    t.integer "invited"
+    t.string "personality"
+    t.text "action"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
+  create_table "commments", force: :cascade do |t|
+    t.text "feedback"
+    t.bigint "post_id", null: false
+    t.integer "views"
+    t.integer "candidates"
+    t.integer "invited"
+    t.text "action"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_commments_on_post_id"
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_12_20_143934) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.boolean "staff"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
   end
@@ -59,4 +85,6 @@ ActiveRecord::Schema.define(version: 2021_12_20_143934) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "commments", "posts"
 end

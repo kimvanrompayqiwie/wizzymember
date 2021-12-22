@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feedback: MyText
+  post: one
+  views: 1
+  candidates: 1
+  invited: 1
+  action: MyText
+
+two:
+  feedback: MyText
+  post: two
+  views: 1
+  candidates: 1
+  invited: 1
+  action: MyText
